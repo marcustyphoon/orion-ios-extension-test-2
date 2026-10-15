@@ -13,11 +13,6 @@
   "content_scripts": [
     {
       "matches": ["*://*.example.com/*"],
-      "js": ["main_world_content_script.js"],
-      "world": "MAIN"
-    },
-    {
-      "matches": ["*://*.example.com/*"],
       "js": ["isolated_world_content_script.js"]
     }
   ],
