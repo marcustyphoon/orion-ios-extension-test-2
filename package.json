@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "test": "web-ext lint && npm run eslint && npm run prettier",
+    "eslint": "eslint src",
+    "prettier": "prettier src --check",
+    "start": "web-ext run",
+    "build": "web-ext build --overwrite-dest"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "web-ext": "^10.8.0"
+  },
+  "webExt": {
+    "sourceDir": "src/"
+  }
+}

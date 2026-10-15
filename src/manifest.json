@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+
+  "name": "Orion iOS Extension Test",
+  "version": "0.1",
+
+  "web_accessible_resources": [
+    {
+      "matches": ["*://*.example.com/*"],
+      "resources": ["*.js"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.example.com/*"],
+      "js": ["main_world_content_script.js"],
+      "world": "MAIN"
+    },
+    {
+      "matches": ["*://*.example.com/*"],
+      "js": ["isolated_world_content_script.js"]
+    }
+  ],
+
+  "minimum_chrome_version": "111",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "example@example.com",
+      "strict_min_version": "128.0"
+    }
+  }
+}
